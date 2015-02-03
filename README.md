@@ -2,20 +2,20 @@
 
 [![Circle CI](https://circleci.com/gh/go-fetch-js/decompress.svg?style=svg)](https://circleci.com/gh/go-fetch-js/decompress)
 
-Decompress responses compressed with gz..
+Decompress responses compressed with gzip.
 
 ## Installation 
 
-    npm install --save go-fetch-compression
+    npm install --save go-fetch-decompress
     
 ## Usage
     
     var HttpClient    = require('go-fetch');
-    var compression   = require('go-fetch-compression');
+    var decompress    = require('go-fetch-decompress');
     var parseBody     = require('go-fetch-read-body');
     
     HttpClient()
-        .use(compression())
+        .use(decompress())
         .use(parseBody())
         .get('http://www.digitaledgeit.com.au/', function(error, response) {
             console.log(

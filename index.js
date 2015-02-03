@@ -8,27 +8,27 @@ var zlib    = require('zlib');
 module.exports = function() {
 	return function(client) {
 
-		client.on('before', function(request, response) {
+		client.on('before', function(event) {
 
 			//indicate to the server that we would like to use gzip
-			request.setHeader('Accept-Encoding', 'gzip');
+			event.request.setHeader('Accept-Encoding', 'gzip');
 
 		});
 
-		client.on('after', function(request, response) {
+		client.on('after', function(event) {
 			var
-				encoding  = response.getHeader('Content-Encoding'),
-				stream    = response.getBody()
+				encoding  = event.response.getHeader('Content-Encoding'),
+				stream    = event.response.getBody()
 			;
 
 			//ensure response is a stream
 			if (!(stream instanceof Stream)) {
-				return next();
+				return;
 			}
 
 			//pass through stream
 			if (encoding === 'gzip') {
-				response.setBody(stream.pipe(zlib.createGunzip()));
+				event.response.setBody(stream.pipe(zlib.createGunzip()));
 			}
 
 		});
