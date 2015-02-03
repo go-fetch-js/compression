@@ -2,7 +2,7 @@
 
 [![Circle CI](https://circleci.com/gh/go-fetch-js/decompress.svg?style=svg)](https://circleci.com/gh/go-fetch-js/decompress)
 
-Decompress responses compressed with gzip.
+Decompress response bodies compressed with gzip.
 
 ## Installation 
 
