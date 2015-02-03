@@ -1,8 +1,8 @@
-# go-fetch-compression
+# go-fetch-decompress
 
-[![Circle CI](https://circleci.com/gh/go-fetch-js/compression.svg?style=svg)](https://circleci.com/gh/go-fetch-js/compression)
+[![Circle CI](https://circleci.com/gh/go-fetch-js/decompress.svg?style=svg)](https://circleci.com/gh/go-fetch-js/decompress)
 
-Handle compressed responses from the server.
+Decompress responses compressed with gz..
 
 ## Installation 
 

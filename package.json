@@ -1,6 +1,6 @@
 {
-  "name": "go-fetch-compression",
-  "description": "Handle compressed responses from the server.",
+  "name": "go-fetch-decompress",
+  "description": "Decompress responses compressed with gz..",
   "keywords": [
     "compression",
     "gzip",
@@ -11,20 +11,19 @@
     "request",
     "fetch"
   ],
-  "version": "0.1.0",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git@github.com:go-fetch-js/compression.git"
+    "url": "git@github.com:go-fetch-js/decompress.git"
   },
   "bugs": {
-    "url": "https://github.com/go-fetch-js/compression/issues"
+    "url": "https://github.com/go-fetch-js/decompress/issues"
   },
   "devDependencies": {
-    "go-fetch": "^1.2.0",
-    "go-fetch-read-body": "^0.1.0"
+    "go-fetch": "^2.0.0"
   },
   "peerDependencies": {
-    "go-fetch": "^1.2.0"
+    "go-fetch": "^2.0.0"
   },
   "scripts": {
     "test": "mocha"

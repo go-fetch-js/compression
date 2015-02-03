@@ -1,9 +1,9 @@
 var HttpClient    = require('go-fetch');
-var compression   = require('..');
-var parseBody     = require('go-fetch-read-body');
+var decompress    = require('..');
+var parseBody     = require('go-fetch-parse-body');
 
 HttpClient()
-	.use(compression())
+	.use(decompress())
 	.use(parseBody())
 	.get('http://www.digitaledgeit.com.au/', function(error, response) {
 		console.log(
